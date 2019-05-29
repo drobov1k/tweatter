@@ -6,13 +6,14 @@
 
     <groupId>com.example</groupId>
     <artifactId>tweater</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.0.0.RELEASE</version>
     </parent>
+
 
     <dependencies>
         <dependency>
@@ -64,12 +65,29 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <distributionManagement>
+        <!-- use the following if you're not using a snapshot version. -->
+        <repository>
+            <id>localSnap</id>
+            <name>RepositoryProxyRel</name>
+            <url>http://127.0.0.1:8080/nexus/content/repositories/releases/</url>
+        </repository>
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>MylocalSnap</id>
+            <name>RepositoryProxySnap</name>
+            <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>
