@@ -65,20 +65,20 @@
         <java.version>1.8</java.version>
     </properties>
 
-    <distributionManagement>
-        <!-- use the following if you're not using a snapshot version. -->
-        <repository>
-            <id>localSnap</id>
-            <name>RepositoryProxyRel</name>
-            <url>http://127.0.0.1:8080/nexus/content/repositories/releases/</url>
-        </repository>
-        <!-- use the following if you ARE using a snapshot version. -->
-        <snapshotRepository>
-            <id>MylocalSnap</id>
-            <name>RepositoryProxySnap</name>
-            <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+<!--    <distributionManagement>-->
+<!--        &lt;!&ndash; use the following if you're not using a snapshot version. &ndash;&gt;-->
+<!--        <repository>-->
+<!--            <id>localSnap</id>-->
+<!--            <name>RepositoryProxyRel</name>-->
+<!--            <url>http://127.0.0.1:8080/nexus/content/repositories/releases/</url>-->
+<!--        </repository>-->
+<!--        &lt;!&ndash; use the following if you ARE using a snapshot version. &ndash;&gt;-->
+<!--        <snapshotRepository>-->
+<!--            <id>MylocalSnap</id>-->
+<!--            <name>RepositoryProxySnap</name>-->
+<!--            <url>http://127.0.0.1:8080/nexus/content/repositories/snapshots/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
 
     <build>
         <plugins>
